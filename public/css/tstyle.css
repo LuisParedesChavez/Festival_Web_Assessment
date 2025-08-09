@@ -1,0 +1,217 @@
+body {
+    background-image: url('/img/techno.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.9); /* Neutral semi-transparent background */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999; /* Ensuring the header stays on top */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    backdrop-filter: blur(10px); /* Blur effect for a more modern look */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin: 0;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav ul li a:hover {
+    background-color: #4CAF50; /* Hover background color */
+    color: white; /* Hover text color */
+}
+
+nav ul li a:active {
+    background-color: #45a049; /* Active link background color */
+}
+
+.title-container {
+    backdrop-filter: blur(15px); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    padding: 0 10%;
+    box-sizing: border-box;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+.title-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-description-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    font-size: 7em;
+    background: -webkit-linear-gradient(45deg, #00FFFF, #FF00FF); /* Neon cyan to magenta gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 
+        0 1px 1px rgba(0, 0, 0, 0.8), /* Strong bottom shadow */
+        0 -1px 1px rgba(0, 255, 255, 0.6), /* Neon cyan top highlight */
+        1px 1px 1px rgba(0, 0, 0, 0.8), /* Bottom-right shadow */
+        -1px -1px 1px rgba(255, 0, 255, 0.6); /* Magenta top-left highlight */
+    margin: 0;
+    padding: 30px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 0.1em; /* Slightly increased letter spacing for a futuristic feel */
+}
+
+
+
+
+
+
+.small-description {
+    color: #E0E0E0; /* Light grey for readability against blue background */
+    text-align: left;
+    padding: 10px; /* Space around the text */
+    width: fit-content;
+    text-shadow: 
+        1px 1px 2px rgba(0, 0, 0, 0.8),   /* Subtle bottom-right shadow */
+        -1px -1px 2px rgba(0, 255, 255, 0.5); /* Neon cyan top-left highlight */
+    font-size: 2em;
+    font-family: 'Roboto', sans-serif; /* Modern sans-serif font */
+    line-height: 1.4em;
+    max-width: 600px;
+    margin-top: 500px;
+    letter-spacing: 0.05em; /* Slightly increased letter spacing */
+}
+
+
+.second-section {
+    width: 100%;
+    height: 100vh; /* This will make the section take up the whole viewport height */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/fondotechno.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.description {
+    max-width: 800px;
+    margin-top: 80px;
+    text-align: center;
+    color: #E0E0E0; /* Light grey for readability against purple background */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3); /* Slightly darker semi-transparent background for better text visibility */
+    font-size: 24px; /* Keep the text size the same */
+    text-shadow: 
+        1px 1px 2px rgba(0, 0, 0, 0.8), /* Subtle bottom-right shadow */
+        -1px -1px 2px rgba(128, 0, 128, 0.5); /* Purple top-left highlight for a futuristic touch */
+    box-shadow: 
+        0 0 10px 10px rgba(0, 0, 0, 0.5); /* Reduced spread and opacity for a more defined shadow */
+    font-family: 'Roboto', sans-serif; /* Modern sans-serif font */
+    line-height: 1.4em;
+    letter-spacing: 0.05em; /* Slightly increased letter spacing for readability */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    .acts-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .act img {
+        width: 150px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    .acts-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .act img {
+        width: 100px;
+    }
+    .lineup-btn {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+    .text-overlay h5, .text-overlay h6 {
+        font-size: 2.5em;
+    }
+    .login-btn {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    .acts-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .act img {
+        width: 80px;
+    }
+    .lineup-btn {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+    .text-overlay h5, .text-overlay h6 {
+        font-size: 2em;
+    }
+    .login-btn {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+  }

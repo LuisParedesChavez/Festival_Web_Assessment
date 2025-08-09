@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Festival Website</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/faq">FAQ</a></li>
+                <li><a href="/login">Login / Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="lineup">
+        <h1 class="title">Welcome to the BP festival for this summer 20th of June 2024!</h1>
+
+        <div class="acts-container">
+            <div class="act">
+                <a href="/rock"><img src="/img/rock.jpg" alt="Rock Music"></a>
+                <h2><a href="/rock">ROCK</a></h2>
+            </div>
+
+            <div class="act">
+                <a href="/pop"><img src="/img/pop.png" alt="Pop Music"></a>
+                <h2><a href="/pop">POP</a></h2>
+            </div>
+
+            <div class="act">
+                <a href="/techno"><img src="/img/techno.webp" alt="Techno Music"></a>
+                <h2><a href="/techno">TECHNO</a></h2>
+            </div>
+        </div>
+
+        <!-- New Line-Up Button -->
+        <div class="lineup-button-container">
+            <a class="lineup-btn" href="/lineup">View Full Line-Up</a>
+        </div>
+    </section>
+
+    <div id="actDetails">
+        <div class="image-container">
+            <img src="/img/festival1.avif" alt="Festival">
+            <div class="text-overlay">
+                <h5>Meet the most awaited event of the year where the real music lives and the life starts! Mark the date on the : 20/06/2024!</h5>
+                <h6>We will be lucky to have the best of each genre. Rockstars, the most successful pop stars, and even some techno magic with amazing scenarios.</h6>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm" action="/contact" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

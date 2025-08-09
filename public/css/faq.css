@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/concierto.fondo.jpeg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  header {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: left;
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+  nav ul li {
+    margin: 0 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  nav ul li a:hover {
+    background-color: #555;
+  }
+  
+  #faq {
+    padding: 20px;
+    background-color: #222;
+    color: #f0f0f0;
+    border-radius: 10px;
+    margin-top: 80px;
+  }
+  
+  #faq h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .faq-item {
+    margin-bottom: 20px;
+  }
+  
+  .faq-item h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .faq-item p {
+    font-size: 1.2em;
+    margin: 0;
+  }
+  
+  /* Responsive Design */
+@media (max-width: 1200px) {
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+  nav ul li {
+      margin: 10px 0;
+  }
+  .acts-container {
+      flex-direction: column;
+      align-items: center;
+  }
+  .act img {
+      width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+      font-size: 2em;
+  }
+  .acts-container {
+      flex-direction: column;
+      align-items: center;
+  }
+  .act img {
+      width: 100px;
+  }
+  .lineup-btn {
+      font-size: 1em;
+      padding: 8px 16px;
+  }
+  .text-overlay h5, .text-overlay h6 {
+      font-size: 2.5em;
+  }
+  .login-btn {
+      font-size: 0.9em;
+      padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+      font-size: 1.5em;
+  }
+  .acts-container {
+      flex-direction: column;
+      align-items: center;
+  }
+  .act img {
+      width: 80px;
+  }
+  .lineup-btn {
+      font-size: 0.8em;
+      padding: 6px 12px;
+  }
+  .text-overlay h5, .text-overlay h6 {
+      font-size: 2em;
+  }
+  .login-btn {
+      font-size: 0.8em;
+      padding: 6px 12px;
+  }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lineup</title>
+    <link rel="stylesheet" href="/css/lineup.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/rock">Rock Stage</a></li>
+                <li><a href="/pop">Pop Stage</a></li>
+                <li><a href="/techno">Techno Stage</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="lineup">
+        <h1>Concert Line-Up</h1>
+
+        <form action="/lineup" method="get">
+            <label for="year">Select Year:</label>
+            <select name="year" id="year" onchange="this.form.submit()">
+                <option value="2024" <%= year == 2024 ? 'selected' : '' %>>2024</option>
+                <option value="2023" <%= year == 2023 ? 'selected' : '' %>>2023</option>
+                <!-- Add more years as needed -->
+            </select>
+            <button type="button" onclick="window.location.href='/lineup?year=2024'">View Current Year</button>
+        </form>
+
+        <% if (lineup && lineup.length > 0) { %>
+            <div class="section rock-section">
+                <h2>Rock and Roll Concert</h2>
+                <ul>
+                    <% lineup.filter(artist => artist.stage === 'Rock').forEach(artist => { %>
+                        <li><%= artist.artist %></li>
+                    <% }) %>
+                </ul>
+            </div>
+
+            <div class="section techno-section">
+                <h2>Techno Concert</h2>
+                <ul>
+                    <% lineup.filter(artist => artist.stage === 'Techno').forEach(artist => { %>
+                        <li><%= artist.artist %></li>
+                    <% }) %>
+                </ul>
+            </div>
+
+            <div class="section pop-section">
+                <h2>Pop Concert</h2>
+                <ul>
+                    <% lineup.filter(artist => artist.stage === 'Pop').forEach(artist => { %>
+                        <li><%= artist.artist %></li>
+                    <% }) %>
+                </ul>
+            </div>
+        <% } else { %>
+            <p>No lineup data available for the selected year.</p>
+        <% } %>
+    </section>
+</body>
+</html>
